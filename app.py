@@ -19,7 +19,7 @@ def index():
     image_path = "/static/images/" + random.choice(images)
 
     count = redis.incr('count')
-    return render_template('index.html', image_path=image_path, access_count=count)
+    return render_template('index.html', image_path=image_path, visit_count=count)
 
 # Main
 if __name__ == "__main__":
